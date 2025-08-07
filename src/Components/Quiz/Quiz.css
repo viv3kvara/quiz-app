@@ -60,3 +60,17 @@
   -moz-user-select: none;
   -ms-user-select: none;
 }
+.creator-badge {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: rgba(25, 0, 108, 0.85);
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 20px 8px 20px 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    z-index: 9999;
+    letter-spacing: 0.5px;
+}
