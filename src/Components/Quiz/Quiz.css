@@ -1,8 +1,8 @@
 .container {
-  width: 640px;
+  max-width: 640px;
+  width: 95%;
   height: auto;
-  margin: auto;
-  margin-top: 70px;
+  margin: 40px auto;
   background: white;
   color: #262626;
   display: flex;
@@ -10,67 +10,117 @@
   gap: 20px;
   border-radius: 10px;
   padding: 30px 40px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 6px rgba(0,0,0,0.04);
 }
+
 .container hr {
   height: 2px;
   border: none;
   background: #707070;
 }
+
 .container h2 {
-  font-size: 27;
-  font-weight: 50;
+  font-size: 2rem;
+  font-weight: 500;
 }
+
 .container ul li {
   display: flex;
   align-items: center;
-  height: 70px;
+  min-height: 60px;
   padding-left: 15px;
   border: 1px solid #686868;
   border-radius: 8px;
-  margin-bottom: 20px;
-  font-size: 20px;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
   cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
 }
+
 .container button {
-  margin: auto;
-  width: 100px;
-  height: 65px;
+  margin: 24px auto 0 auto;
+  width: 220px;
+  height: 55px;
   background: #553f9a;
   color: #fff;
-  font-size: 25px;
+  font-size: 1.2rem;
   font-weight: 500;
   border-radius: 8px;
   cursor: pointer;
+  border: none;
+  transition: background 0.2s;
 }
+
+.container button:hover {
+  background: #432d7c;
+}
+
 .container .index {
   margin: auto;
-  font-size: 18px;
+  font-size: 1rem;
 }
+
 .container .correct {
   background: #dffff2;
   border-color: #00d397;
 }
+
 .container .wrong {
   background: #ffebeb;
   border-color: #ff4a4a;
 }
+
 .no-select {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
 }
+
 .creator-badge {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background: rgba(25, 0, 108, 0.85);
-    color: #fff;
-    padding: 10px 22px;
-    border-radius: 20px 8px 20px 8px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: rgba(25, 0, 108, 0.85);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 20px 8px 20px 8px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  z-index: 9999;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .container {
+    padding: 24px 16px;
+    max-width: 98vw;
+  }
+  .container button {
+    width: 100%;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 14px 4vw;
+    margin: 16px auto;
+  }
+  .container h2 {
+    font-size: 1.2rem;
+  }
+  .container ul li {
     font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-    z-index: 9999;
-    letter-spacing: 0.5px;
+    min-height: 44px;
+    padding-left: 8px;
+  }
+  .creator-badge {
+    right: 8px;
+    bottom: 8px;
+    font-size: 0.85rem;
+    padding: 7px 12px;
+  }
 }
